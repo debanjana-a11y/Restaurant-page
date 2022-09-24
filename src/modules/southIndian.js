@@ -21,6 +21,6 @@ const itemList = [
     }
 ];
 
-export default function addSouthIndian () {
-    addDish('South Indian Cuisine', itemList);
+export default function addSouthIndian (id) {
+    addDish(id, 'South Indian Cuisine', itemList);
 }

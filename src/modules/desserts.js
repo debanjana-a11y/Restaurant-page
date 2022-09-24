@@ -21,6 +21,6 @@ const itemList = [
     }
 ];
 
-export default function addDesserts () {
-    addDish('Desserts', itemList);
+export default function addDesserts (id) {
+    addDish(id, 'Desserts', itemList);
 }

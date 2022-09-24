@@ -21,6 +21,6 @@ const itemList = [
     }
 ];
 
-export default function addNorthIndian () {
-    addDish('North Indian Cuisine', itemList);
+export default function addNorthIndian (id) {
+    addDish(id, 'North Indian Cuisine', itemList);
 }
