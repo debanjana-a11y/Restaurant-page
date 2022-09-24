@@ -12,6 +12,12 @@ html, body {
     height: 100vh;
 }
 
+.active {
+    position: absolute;
+    display: block;
+    z-index: 1;
+}
+
 h2 {
     text-align: center;
     text-decoration: overline underline;
@@ -83,6 +89,11 @@ main {
 }
 
 /***************** Each Menu Page ******************/
+
+.inactive {
+    display: none;
+}
+
 .menuList {
     width: 100%;
     /* background-color: #673E3E; */

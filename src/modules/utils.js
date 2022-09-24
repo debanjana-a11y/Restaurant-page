@@ -4,6 +4,7 @@ export default function addDish (id, dishType, itemList) {
     const menuList = document.createElement('div');
     menuList.id = id;
     menuList.classList.add('menuList');
+    menuList.classList.add('inactive');
     const heading = document.createElement('h2');
     heading.innerText = dishType;  
     const menuBox = document.createElement('div');

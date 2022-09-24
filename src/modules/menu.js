@@ -25,12 +25,7 @@ const loadMenuPage = () => {
     for(let id = 0; id < cuisineType.length; id++) {
         const element = cuisineType[id];
         const btnCuisine = document.createElement('button');
-
-        const hyperlink = document.createElement('a');
-        hyperlink.innerText = element;
-        hyperlink.href = `#${id}`;
-        hyperlink.classList.add('links');
-        btnCuisine.appendChild(hyperlink);
+        btnCuisine.innerText = element;
         btnCuisine.classList.add('menuBtn');
         menuType.appendChild(btnCuisine);
     }
@@ -63,12 +58,12 @@ const loadMenuPage = () => {
         }
     });
 
-    for(let id = 0; id < cuisineType.length; id++) {
-        const btnCuisine = document.getElementById(id);
-        console.log(btnCuisine);
+    const menuBtns = document.getElementsByClassName('menuBtn');
+    for(let id = 0; id < menuBtns.length; id++) {
+        const btnCuisine = menuBtns[id];
         btnCuisine.addEventListener('click', function() {
             const page = document.getElementById(id);
-            page.scrollIntoView();
+            page.classList.replace('inactive', 'active');
         });
     }
 };

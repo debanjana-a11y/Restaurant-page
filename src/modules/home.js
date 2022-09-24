@@ -1,9 +1,18 @@
 import '../styles/home.css';
 import logo from "../assets/home/logo_1.png";
+import bg from '../assets/home/bg_1.jpg';
 
 const loadHomePage = () => {
-    const intro = document.getElementsByClassName('introduction')[0];
-    intro.innerHTML="";
+    const main = document.querySelector('main');
+
+    // clean up older tab display
+    // main.style.backgroundImage ="none";
+    main.innerHTML = "";
+    
+    const rightPane = document.createElement('div');
+    rightPane.classList.add('rightPane');
+    const intro = document.createElement('div');
+    intro.classList.add('introduction');
     const resturantLogo = new Image();
     resturantLogo.src = logo;
     intro.appendChild(resturantLogo);
@@ -12,6 +21,9 @@ const loadHomePage = () => {
     greetings.classList.add('welcomeMessage');
 
     intro.appendChild(greetings);
+
+    rightPane.appendChild(intro);
+    main.appendChild(rightPane);
 };
 
 export {loadHomePage};

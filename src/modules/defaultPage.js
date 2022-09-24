@@ -19,11 +19,6 @@ const createHeader = () => {
 
 const createMain = () => {
     const main = document.createElement('main');
-    main.innerHTML =
-    `<div class="rightPane">
-        <div class="introduction">
-        </div>
-    </div>`;
     return main;
 };
 
