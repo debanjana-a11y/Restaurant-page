@@ -1,0 +1,184 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    height: 100%;
+    cursor: url("../assets/home/chef-hat.png"), auto;
+}
+
+:root {
+    --font-size: 2em;
+    --bg-color: #F9F9F9;
+    --pane_height: 80vh solid var(--bg-color);
+    --pane_width: 100vw solid transparent;
+    --font: 'Caveat';
+    --transparent_color: rgba(245, 245, 245, 0.4);
+    --text_1: "Welcome to Pandora";
+    --text_2: "Where all Indian cuisines meet";
+    --small-font: 4vmin;
+}
+
+body {
+    background-image: url('../assets/home/bg_1.jpg');
+    background-position: 20%;
+    font-family: var(--font);
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    font-size: var(--font-size);
+}
+
+header {
+    position: absolute;
+}
+
+#content {
+    width: 100%;
+    height: 100%;
+}
+
+.navBar {
+    margin: 1em 0;
+    height: 2em;
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    font-size: var(--small-font);
+}
+
+.hamburgerMenu {
+    display: none;
+}
+
+.navBar ul {
+    background-color: var(--bg-color);
+    width: 40vmin;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    list-style: none;
+}
+
+.list_item {
+    margin: 5%;
+    cursor: pointer;
+}
+
+.list_item:active {
+    text-decoration: underline;
+    font-weight: bold;
+}
+
+main {
+    height: 100%;
+    flex: 1;
+}
+
+.rightPane {
+    height: inherit;
+    width: 100%;
+    bottom: 0;
+    border-bottom: var(--pane_height);
+    border-left: var(--pane_width);
+    animation: animate 1s ease-in;
+}
+
+@keyframes animate {
+    from {opacity: 0;}
+    to {
+        opacity: 1;
+        transform: translateX(-2px);
+    }
+}
+
+.introduction {
+    float: right;
+    margin-top: 30vh;
+    width: 100vmin;
+    height: calc(100vh - 30vh);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    row-gap: 1em;
+}
+
+.introduction > img {
+    height: 200px;
+    animation: rotation 2s 1 linear;
+}
+
+@keyframes rotation {
+    from {rotate: 0deg;}
+    to {rotate: 359deg;}
+}
+
+.welcomeMessage {
+    background-color: var(--bg-color);
+    font-size: 5vmin;
+    font-weight: bold;
+    margin: 1em;
+    vertical-align: top;
+}
+
+.welcomeMessage::before {
+    content: var(--text_1);
+    animation: textChange infinite 5s 2s;
+}
+
+footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 10vmin;
+    background-color:  rgba(0, 0, 0, 0.5);
+    color: var(--bg-color);
+    font-size: var(--small-font);
+    text-align: center;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-shrink: 0;
+}
+
+footer a {
+    color: inherit;
+}
+
+@keyframes textChange {
+    30% {
+        content: var(--text_1);
+        opacity: 0;
+    }
+    32% {
+        content: var(--text_2);
+        opacity: 0.5;
+    }
+    35% {
+        content: var(--text_2);
+        opacity: 1;
+    }
+    80% {
+        content: var(--text_2);
+        opacity: 0;
+    }
+    82% {
+        content: var(--text_1);
+        opacity: 0.5;
+    }
+    100% {
+        content: var(--text_1);
+        opacity: 1;
+    }
+}
+
+@media only screen and (max-width: 400px) {
+    .welcomeMessage {
+        font-size: 7vmin;
+    }
+}

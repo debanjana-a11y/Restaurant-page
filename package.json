@@ -1,0 +1,29 @@
+{
+  "name": "restaurant-page",
+  "version": "1.0.0",
+  "description": "A project from odin curriculum",
+  "ptivate": true,
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "watch": "webpack --watch",
+    "start": "webpack serve --open",
+    "build": "webpack"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/debanjana-a11y/Restaurant-page.git"
+  },
+  "author": "Debanjana",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/debanjana-a11y/Restaurant-page/issues"
+  },
+  "homepage": "https://github.com/debanjana-a11y/Restaurant-page#readme",
+  "devDependencies": {
+    "css-loader": "^6.7.1",
+    "style-loader": "^3.3.1",
+    "webpack": "^5.74.0",
+    "webpack-cli": "^4.10.0",
+    "webpack-dev-server": "^4.11.1"
+  }
+}
