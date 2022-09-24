@@ -1,17 +1,12 @@
-import {createHeader, createMain, createFooter, loadDefaultPage, loadHomePage} from "./modules/home";
+import {loadHomePage} from "./modules/home";
 
-const myDiv = document.getElementById('content');
-myDiv.appendChild(createHeader());
-myDiv.appendChild(createMain());
-myDiv.appendChild(createFooter());
-
-loadDefaultPage();
+loadHomePage();
 
 const tabChange = (e) => {
     const linkName = e.target.innerText;
     switch(linkName) {
         case 'Home':
-            // loadHomePage();
+            loadHomePage();
             break;
         case 'Menu':
             // loadMenuPage();

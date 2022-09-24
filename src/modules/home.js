@@ -36,7 +36,12 @@ const createFooter = () => {
     return footer;
 };
 
-const loadDefaultPage = () => {
+const loadHomePage = () => {
+    const myDiv = document.getElementById('content');
+    myDiv.appendChild(createHeader());
+    myDiv.appendChild(createMain());
+    myDiv.appendChild(createFooter());
+
     const intro = document.getElementsByClassName('introduction')[0];
 
     const resturantLogo = new Image();
@@ -49,8 +54,4 @@ const loadDefaultPage = () => {
     intro.appendChild(greetings);
 };
 
-const loadHomePage = () => {
-
-};
-
-export {createHeader, createMain, createFooter, loadDefaultPage, loadHomePage};
+export {loadHomePage};
