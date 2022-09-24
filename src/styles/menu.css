@@ -23,6 +23,10 @@ main {
     height: 100%;
 }
 
+.navBar ul {
+    background-color: hsl(50, 100%, 70%);
+}
+
 .catalogue {
     display: flex;
     flex-direction: column;

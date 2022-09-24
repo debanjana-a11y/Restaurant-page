@@ -1,9 +1,4 @@
 import '../styles/menu.css';
-// import '../assets/menu/*.jpg';
-import beverage1 from '../assets/menu/Aam\ Panna.jpg';
-import beverage2 from '../assets/menu/Masala\ Chai.jpg';
-import beverage3 from '../assets/menu/Lassi.jpg';
-
 import addNorthIndian from './northIndian';
 import addEastIndian from './eastIndian';
 import addSouthIndian from './southIndian';
