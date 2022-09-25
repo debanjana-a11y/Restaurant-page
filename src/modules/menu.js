@@ -79,7 +79,6 @@ const loadMenuPage = () => {
             const page = document.getElementById(id);
             page.classList.replace('inactive', 'active');
             const goBackBtn = document.getElementsByClassName('goBackBtn')[0];
-            console.log(goBackBtn);
             goBackBtn.classList.remove('inactive');
         });
     }
