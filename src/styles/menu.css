@@ -12,6 +12,10 @@ html, body {
     height: 100vh;
 }
 
+.inactive {
+    display: none;
+}
+
 .active {
     position: absolute;
     display: block;
@@ -72,27 +76,24 @@ main {
     cursor: pointer;
 }
 
-@media screen and (max-width: 850px) {
-    .menuType {
-        width: auto;
-    }
+/********* Go Back *********/
+.goBackBtn {
+    background-color: transparent;
+    height: 5em;
+    width: auto;
+    position: fixed;
+    bottom: 10vh;
+    left: 10px;
+    z-index: 2;
+    cursor: pointer;
+    border: none;
 }
 
-/********* Go Back *********/
-
-.upArrow {
-    height: 2em;
-    position: fixed;
-    right: 0;
-    bottom: 0;
-    cursor: pointer;
+.leftArrow {
+    height: inherit;
 }
 
 /***************** Each Menu Page ******************/
-
-.inactive {
-    display: none;
-}
 
 .menuList {
     width: 100%;
@@ -139,4 +140,16 @@ main {
 
 .order:hover {
     transform: scale(1.2);
+}
+
+@media screen and (max-width: 980px) {
+    .cuisineType {
+        width: auto;
+    }
+}
+
+@media screen and (max-width: 550px) {
+    .menuBox {
+        grid-template-columns: auto;
+    }
 }

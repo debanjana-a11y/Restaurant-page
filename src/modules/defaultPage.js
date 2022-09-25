@@ -25,7 +25,10 @@ const createMain = () => {
 const createFooter = () => {
     const footer = document.createElement('footer');
     footer.innerHTML =
-    `<span>Icon/Image credit: <a href="https://www.flaticon.com" target="_blank">flaticon.com</a></span> 
+    `<span>Icon/Image credit:
+    <a href="https://www.flaticon.com" target="_blank">flaticon</a>,
+    <a href="https://www.freepik.com" target="_blank">freepik</a>,
+    <a href="https://pixabay.com" target="_blank">pixabay</a></span> 
      <span>Copyright &copy Debanjana</span>`;
     return footer;
 };

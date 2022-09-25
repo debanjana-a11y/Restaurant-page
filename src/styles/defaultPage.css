@@ -81,18 +81,20 @@ header {
 }
 
 footer {
-    position: absolute;
+    position: fixed;
     bottom: 0;
     width: 100%;
     height: 10vmin;
+    padding: 0 1em;
     background-color:  rgba(0, 0, 0, 0.5);
     color: var(--bg-color);
     font-size: var(--small-font);
     text-align: center;
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     align-items: center;
     flex-shrink: 0;
+    z-index: 10;
 }
 
 footer a {

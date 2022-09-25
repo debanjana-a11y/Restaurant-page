@@ -1,4 +1,5 @@
 import '../styles/menu.css';
+import backBtnPic from '../assets/menu/go-back.jpg';
 import addNorthIndian from './northIndian';
 import addEastIndian from './eastIndian';
 import addSouthIndian from './southIndian';
@@ -20,6 +21,19 @@ const loadMenuPage = () => {
     const info = document.createElement('p');
     info.innerHTML = "Pick your meal today";
     catalogue.appendChild(info);
+
+    const backBtn = document.createElement('button');
+    backBtn.classList.add('goBackBtn');
+    backBtn.classList.add('inactive');
+
+    const goBack = new Image();
+    goBack.src = backBtnPic;
+    goBack.alt = "left arrow icon";
+    goBack.classList.add('leftArrow');
+    backBtn.appendChild(goBack);
+
+    backBtn.addEventListener('click', loadMenuPage);
+    main.appendChild(backBtn);
 
     const menuType = document.createElement('div');
     for(let id = 0; id < cuisineType.length; id++) {
@@ -64,6 +78,9 @@ const loadMenuPage = () => {
         btnCuisine.addEventListener('click', function() {
             const page = document.getElementById(id);
             page.classList.replace('inactive', 'active');
+            const goBackBtn = document.getElementsByClassName('goBackBtn')[0];
+            console.log(goBackBtn);
+            goBackBtn.classList.remove('inactive');
         });
     }
 };
