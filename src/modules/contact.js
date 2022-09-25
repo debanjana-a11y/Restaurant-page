@@ -4,10 +4,9 @@ import instagramLogo from '../assets/contact/instagram.png';
 import facebookLogo from '../assets/contact/facebook.png';
 
 const loadContactPage = () => {
-    const content = document.getElementById('content');
     // Delete old main
     const main = document.querySelector('main');
-    content.removeChild(main);
+    main.innerHTML = "";
 
     // Add Contact Informations
     const contactPage = document.createElement('div');
@@ -70,7 +69,7 @@ const loadContactPage = () => {
 
     contactDetails.appendChild(socialMediaPage);
     contactPage.appendChild(contactDetails);
-    content.appendChild(contactPage);
+    main.appendChild(contactPage);
 }
 
 export {loadContactPage};

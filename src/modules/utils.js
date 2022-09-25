@@ -1,5 +1,5 @@
 export default function addDish (id, dishType, itemList) {
-    const main = document.querySelector('main');
+    const menuPage = document.getElementsByClassName('menu')[0];
     
     const menuList = document.createElement('div');
     menuList.id = id;
@@ -42,5 +42,5 @@ export default function addDish (id, dishType, itemList) {
 
     menuList.appendChild(heading);
     menuList.appendChild(menuBox);
-    main.appendChild(menuList);
+    menuPage.appendChild(menuList);
 }

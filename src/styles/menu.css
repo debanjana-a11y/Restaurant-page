@@ -1,14 +1,12 @@
 :root {
-    --para-size: 10px;
-    --font: 'Caveat';
-    --font-size: 5vmin;
+    --menu-font-size: 5vmin;
 }
 
 * {
-    font-family: var(--font);
+    font-family: 'Caveat';
 }
 
-html, body {
+main {
     height: 100%;
 }
 
@@ -27,10 +25,12 @@ h2 {
     text-decoration: overline underline;
 }
 
-main {
+.menu {
+    height: inherit;
+    width: 100%;
     background-color: #FFEEB1;
     font-weight: bold;
-    height: 100%;
+    display: flex;
 }
 
 .navBar ul {
@@ -38,16 +38,17 @@ main {
 }
 
 .catalogue {
+    height: 30em;
+    width: 100%;
+    margin: 5em 0;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
     align-items: center;
-    width: 100%;
-    margin: 120px 0;
 }
 
 .catalogue > p {
-    font-size: var(--font-size);
+    font-size: var(--menu-font-size);
 }
 
 .cuisineType {
@@ -64,7 +65,7 @@ main {
 .menuBtn {
     height: 3em;
     width: 6em;
-    font-size: 1em;
+    font-size: var(--menu-font-size);
     border: none;
     /* color: blue;
     background-image: linear-gradient(to bottom right, orange, white, green); */
@@ -97,8 +98,11 @@ main {
 
 .menuList {
     width: 100%;
-    /* background-color: #673E3E; */
     background: linear-gradient(120deg, #fdcd3b 60%, #ffed4b 10%);
+}
+
+.menuList h2 {
+    font-size: calc(var(--menu-font-size) * 1.5);
 }
 
 .menuBox {
@@ -108,7 +112,7 @@ main {
     grid-template-columns: repeat(auto-fill, minmax(20rem, 2fr));
     row-gap: 2em;
     column-gap: 1em;
-    padding: 1em;
+    padding: 2em;
     margin: 5% 10%;
     flex-wrap: wrap;
 }
@@ -119,20 +123,26 @@ main {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    row-gap: 1.2rem;
+    row-gap: 2em;
     padding: 1em;
     text-align: center;
 }
 
 .dish img {
-    height: 6em;
+    height: 12em;
     border-radius: 50%;
+}
+
+.dishInfo > p {
+    height: 1em;
+    font-size: var(--menu-font-size);
+    margin: 0;
 }
 
 .order {
     background-color: #434710;
     color: #FFFFFF;
-    font-size: 1em;
+    font-size: var(--menu-font-size);
     width: 4em;
     height: 1.5em;
     cursor: pointer;

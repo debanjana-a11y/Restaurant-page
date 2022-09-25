@@ -16,6 +16,9 @@ const loadMenuPage = () => {
     main.style.backgroundImage ="none";
     main.innerHTML = "";
 
+    const menuPage = document.createElement('div');
+    menuPage.classList.add('menu');
+
     // Add Menu
     const catalogue = document.createElement('div');
     const info = document.createElement('p');
@@ -33,7 +36,7 @@ const loadMenuPage = () => {
     backBtn.appendChild(goBack);
 
     backBtn.addEventListener('click', loadMenuPage);
-    main.appendChild(backBtn);
+    menuPage.appendChild(backBtn);
 
     const menuType = document.createElement('div');
     for(let id = 0; id < cuisineType.length; id++) {
@@ -47,7 +50,8 @@ const loadMenuPage = () => {
     menuType.classList.add('cuisineType');
     catalogue.appendChild(menuType);
     catalogue.classList.add('catalogue');
-    main.appendChild(catalogue);
+    menuPage.appendChild(catalogue);
+    main.appendChild(menuPage);
 
     // Add Individual Menu
     cuisineType.forEach(element => {
