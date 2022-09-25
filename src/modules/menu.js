@@ -13,7 +13,6 @@ const loadMenuPage = () => {
     const main = document.querySelector('main');
 
     // clean up older tab display
-    main.style.backgroundImage ="none";
     main.innerHTML = "";
 
     const menuPage = document.createElement('div');

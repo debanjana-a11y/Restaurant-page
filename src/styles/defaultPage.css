@@ -1,19 +1,16 @@
+:root {
+    --main-bg-color: #F9F9F9;
+    --main-font-size: 2em;
+    --small-font-size: 4vmin;
+    --menu-font-size: 5vmin;
+    --contact-font-size: 1em;
+}
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-}
-
-:root {
-    --font-size: 2em;
-    --bg-color: #F9F9F9;
-    --pane_height: 80vh solid var(--bg-color);
-    --pane_width: 100vw solid transparent;
-    --font: 'Caveat';
-    --transparent_color: rgba(245, 245, 245, 0.4);
-    --text_1: "Welcome to Pandora";
-    --text_2: "Where all Indian cuisines meet";
-    --small-font: 4vmin;
+    font-family: 'Caveat';
 }
 
 html, body {
@@ -26,20 +23,7 @@ body {
     flex-direction: column;
     justify-content: flex-start;
     align-items: center;
-    font-size: var(--font-size);
-    font-family: var(--font);
-}
-
-main {
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    align-items: center;
-    font-size: var(--font-size);
-}
-
-header {
-    position: absolute;
+    font-size: var(--main-font-size);
 }
 
 #content {
@@ -47,14 +31,18 @@ header {
     height: 100%;
 }
 
+header {
+    position: absolute;
+}
+
 .navBar {
     margin: 1em 0;
-    height: 2em;
+    height: 1rem;
     width: 100%;
     display: flex;
     justify-content: space-evenly;
     align-items: center;
-    font-size: var(--small-font);
+    font-size: var(--small-font-size);
 }
 
 .hamburgerMenu {
@@ -62,7 +50,7 @@ header {
 }
 
 .navBar ul {
-    background-color: var(--bg-color);
+    background-color: var(--main-bg-color);
     width: 40vmin;
     display: flex;
     justify-content: center;
@@ -75,9 +63,12 @@ header {
     cursor: pointer;
 }
 
-.list_item:active {
-    text-decoration: underline;
+.list-active {
     font-weight: bold;
+}
+
+main {
+    height: 100%;
 }
 
 footer {
@@ -87,8 +78,8 @@ footer {
     height: 10vmin;
     padding: 0 1em;
     background-color:  rgba(0, 0, 0, 0.5);
-    color: var(--bg-color);
-    font-size: var(--small-font);
+    color: var(--main-bg-color);
+    font-size: var(--small-font-size);
     text-align: center;
     display: flex;
     justify-content: space-between;

@@ -1,15 +1,26 @@
-main {
+:root {
+    --pane-height: 80vh solid var(--main-bg-color);
+    --pane-width: 100vw solid transparent;
+    --transparent-bg-color: rgba(245, 245, 245, 0.4);
+    --welcome-text-1: "Welcome to Pandora";
+    --welcome-text-2: "Where all Indian cuisines meet";
+    --welcome-text-3: "Open hours 10:00AM - 11:30PM";
+    --welcome-text-4: "We are open EVERYDAY";
+}
+
+.home {
     background-image: url('../assets/home/bg_1.jpg');
+    background-position: center;
     height: 100%;
-    flex: 1;
+    font-size: var(--main-font-size);
 }
 
 .rightPane {
     height: inherit;
     width: 100%;
     bottom: 0;
-    border-bottom: var(--pane_height);
-    border-left: var(--pane_width);
+    border-bottom: var(--pane-height);
+    border-left: var(--pane-width);
     animation: animate 1s ease-in;
 }
 
@@ -23,14 +34,14 @@ main {
 
 .introduction {
     float: right;
-    margin-top: 30vh;
+    margin-top: 40vh;
     width: 100vmin;
-    height: calc(100vh - 30vh);
+    height: calc(100vh - 40vh);
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    row-gap: 1em;
+    row-gap: 1rem;
 }
 
 .introduction > img {
@@ -44,7 +55,7 @@ main {
 }
 
 .welcomeMessage {
-    background-color: var(--bg-color);
+    background-color: var(--main-bg-color);
     font-size: 5vmin;
     font-weight: bold;
     margin: 1em;
@@ -52,33 +63,25 @@ main {
 }
 
 .welcomeMessage::before {
-    content: var(--text_1);
-    animation: textChange infinite 5s 2s;
+    content: var(--welcome-text-1);
+    animation: textChange infinite 10s 2s;
 }
 
 @keyframes textChange {
+    0% {
+        content: var(--welcome-text-1);
+        opacity: 1;
+    }
     30% {
-        content: var(--text_1);
-        opacity: 0;
+        content: var(--welcome-text-2);
+        opacity: 1;
     }
-    32% {
-        content: var(--text_2);
-        opacity: 0.5;
-    }
-    35% {
-        content: var(--text_2);
+    50% {
+        content: var(--welcome-text-3);
         opacity: 1;
     }
     80% {
-        content: var(--text_2);
-        opacity: 0;
-    }
-    82% {
-        content: var(--text_1);
-        opacity: 0.5;
-    }
-    100% {
-        content: var(--text_1);
+        content: var(--welcome-text-4);
         opacity: 1;
     }
 }

@@ -4,10 +4,11 @@ import bg from '../assets/home/bg_1.jpg';
 
 const loadHomePage = () => {
     const main = document.querySelector('main');
-
     // clean up older tab display
-    // main.style.backgroundImage ="none";
     main.innerHTML = "";
+
+    const homePage = document.createElement('div');
+    homePage.classList.add('home');
     
     const rightPane = document.createElement('div');
     rightPane.classList.add('rightPane');
@@ -23,7 +24,8 @@ const loadHomePage = () => {
     intro.appendChild(greetings);
 
     rightPane.appendChild(intro);
-    main.appendChild(rightPane);
+    homePage.appendChild(rightPane);
+    main.appendChild(homePage);
 };
 
 export {loadHomePage};

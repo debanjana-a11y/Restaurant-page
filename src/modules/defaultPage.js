@@ -10,7 +10,7 @@ const createHeader = () => {
             <div></div>
         </div>
         <ul>
-            <li class="list_item">Home</li>
+            <li class="homeLink list_item">Home</li>
             <li class="list_item">Menu</li>
             <li class="list_item">Contact</li>
         </ul>`;

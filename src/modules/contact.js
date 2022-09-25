@@ -16,6 +16,7 @@ const loadContactPage = () => {
     reviews.classList.add('reviews');
     const header = document.createElement('h2');
     header.innerText = "Write to us: ";
+    header.classList.add('contactHeader');
     
     const form = document.createElement('form');
     form.classList.add('reviewForm');
@@ -39,6 +40,7 @@ const loadContactPage = () => {
 
     const address = document.createElement('p');
     address.innerText = "Abbottstown, PA 17301, United States";
+    address.classList.add('contactParagraph');
     contactDetails.appendChild(address);
 
     const iframe = document.createElement('iframe');
@@ -51,6 +53,7 @@ const loadContactPage = () => {
     socialMediaPage.classList.add('socialMediaPage');
     const banner = document.createElement('p');
     banner.innerText = "Follow Us";
+    banner.classList.add('contactParagraph');
     
     const socialMedia = document.createElement('div');
     socialMedia.classList.add('socialMedia');
