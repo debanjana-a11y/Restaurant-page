@@ -153,9 +153,11 @@ h2 {
 
     .dish {
         width: auto;
+        row-gap: 0.5em;
     }
 
     .dish > img {
-        height: 2em;
+        height: 30vmin;
+        width: auto;
     }
 }
