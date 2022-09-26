@@ -2,7 +2,7 @@
   "name": "restaurant-page",
   "version": "1.0.0",
   "description": "A project from odin curriculum",
-  "ptivate": true,
+  "private": true,
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "watch": "webpack --watch",
